@@ -13,7 +13,8 @@ router.post('/nuevoUsuario', async (req, res) => {
     const body = {
         usuarioNombre: req.body.usuarioNombre,
         usuarioMail: req.body.usuarioMail,
-        usuarioRol: req.body.usuarioRol
+        usuarioRol: req.body.usuarioRol,
+        usuarioCodigo: req.body.usuarioCodigo
     }
     //encriptacion contraseña usuarios
     body.usuarioPassword = bcrypt.hashSync(req.body.usuarioPassword, saltRounds);

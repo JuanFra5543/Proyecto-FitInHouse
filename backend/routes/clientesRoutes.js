@@ -72,7 +72,8 @@ router.post('/nuevoCliente',async (req, res) => {
         clienteGenero: req.body.clienteGenero,
         clienteCalDiarias: req.body.clienteCalDiarias,
         caf: req.body.caf,
-        planAlimenticio: req.body.planAlimenticio
+        planAlimenticio: req.body.planAlimenticio,
+        clienteCodigo: req.body.clienteCodigo
     }
     try{
         const clienteDB = await Cliente.create(body);
